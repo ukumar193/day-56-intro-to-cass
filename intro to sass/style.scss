@@ -1,0 +1,74 @@
+@import "./login.scss";
+
+
+// body{background-color: red;
+// margin: 20px;}
+h1{
+     color: aqua;
+     font-size: 2rem;
+}
+form{
+     div{
+          label{color: gray;}}
+     }
+// div{
+//      color: aquamarine;
+// }
+form{
+     p{
+          color: rgb(27, 41, 63);
+     }
+}
+form{
+     font-size: 1.5rem;
+     background-color: rgb(180, 180, 114);
+     width: 420px;
+     padding: 25px;
+     border-radius: 10px;
+     box-shadow: 5px 5px 5px beige;
+}
+p{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     letter-spacing: 3px;
+     color: brown;
+     font-size: 1.5rem;
+}
+@mixin btnstyles($bc,$fc,$br,$fs){
+     background-color: $bc;
+     color:$fc;
+     border-radius: $br;
+     font-size: $fs;
+     width: 150px;
+     margin: 10px;
+
+}
+#bt1{
+     @include btnstyles(yellow,green ,2px ,1.6rem )
+     
+}
+#bt2{
+     @include btnstyles(green,yellow ,3px ,1.6rem )
+}
+#bt3{
+     @include btnstyles(blue,red ,3px ,1.6rem )
+}
+#bt4{
+     @include btnstyles(rgb(229, 229, 241),rgb(0, 255, 72) ,3px ,1.6rem )
+}
+#bt5{
+     @include btnstyles(rgb(255, 0, 144),blue,3px ,1.6rem )
+}
+
+@mixin theme-colors($light-theme: true) {
+     @if $light-theme {
+       background-color: $light-background;
+       color: $light-text;
+     } @else {
+       background-color: $dark-background;
+       color: $dark-text;
+     }
+   }
+body{
+     @include theme-colors(false);
+}   
+   
